@@ -1,5 +1,12 @@
 # Bulanci on Linux (Steam + Proton) – game quits a few seconds after start
 
+> **Update (November 2026): no longer needed.** The game update of 2026-11-10
+> (build 26544546; current version 3.86) fixed the problem – the game no longer quits under Proton
+> without the patch, and Steam no longer logs `Failed to initialize depots for EYieldingGetFileDetails`.
+> The bug existed for about **2 years and 1 month** (first seen 2024-10-08 with update 3.7,
+> last seen 2026-11-09). `patch.sh` does not support the new DLL and refuses to touch it;
+> the repository is kept for reference only.
+
 [Slovenská verzia nižšie](#slovensky)
 
 ## Symptoms
@@ -83,6 +90,13 @@ No game files are distributed in this repository.
 
 <a name="slovensky"></a>
 ## Slovensky
+
+> **Aktualizácia (november 2026): oprava už nie je potrebná.** Aktualizácia hry z 10. 11. 2026
+> (build 26544546, aktuálne verzia 3.86) problém odstránila. Hra sa pod Protonom bez patchu
+> nevypína a Steam už nehlási `Failed to initialize depots for EYieldingGetFileDetails`.
+> Chyba existovala približne **2 roky a 1 mesiac** (prvýkrát 8. 10. 2024 s verziou 3.7,
+> naposledy 9. 11. 2026). `patch.sh` novú DLL nepodporuje a nezmení ju. Repozitár ostáva len
+> pre informáciu.
 
 **Problém:** Bulanci (Steam, verzia 3.7) sa pod Protonom spustí a asi po 10 sekundách sa sama
 vypne. V `Player.log` je `RequestFileDetails - failed, 9` a hneď nato `GameManager quiting....`.
